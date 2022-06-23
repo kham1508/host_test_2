@@ -19,7 +19,7 @@ const config = {
 		ssr: false,
 		paths: {
 			//assets: dev ? 'https://bothness.github.io/area-explorer' : '',
-			base: dev ? '/host_test' : ''
+			base: dev ? '/host_test_2' : ''
 		}
 	}
 };
