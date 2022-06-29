@@ -9,8 +9,8 @@ const config = {
 		target: '#svelte',
 		adapter: static_adapter({
 			// Options below are defaults
-			pages: 'build',
-			assets: 'build',
+			pages: 'docs',
+			assets: 'docs',
 			fallback:'404.html'
 		}),
 		prerender: {
