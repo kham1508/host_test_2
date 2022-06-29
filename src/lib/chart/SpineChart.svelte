@@ -1,4 +1,6 @@
 <script>
+	//import pkg from 'layercake';
+	//const { LayerCake, Svg } = pkg;
 	import { LayerCake, Svg } from 'layercake';
 	import { scaleLinear, scaleLog, scaleSqrt } from 'd3-scale';
 

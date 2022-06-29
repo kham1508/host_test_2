@@ -1,25 +1,25 @@
+/** @type {import('@sveltejs/kit').Config} */
 import static_adapter from '@sveltejs/adapter-static';
 
-const dev = 'production' === 'development';
+const production = process.env.NODE_ENV === 'production';
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		adapter: static_adapter({
 			// Options below are defaults
-			pages: 'docs',
-			assets: 'docs',
-			//fallback:'404.html'
+			pages: 'build',
+			assets: 'build',
+			fallback:'404.html'
 		}),
 		prerender: {
 			enabled: false
 		},
 		ssr: false,
 		paths: {
-			//assets: dev ? 'https://bothness.github.io/area-explorer' : '',
-			base: dev ? 'https://kham1508.github.io/host_test_2' : ''
+			assets: production ? 'https://kham1508.github.io/host_test_2' : '',
+			base: production ? '/host_test_2' : ''
 		}
 	}
 };
